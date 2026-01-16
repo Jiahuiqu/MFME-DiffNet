@@ -18,7 +18,7 @@ def _print(arg, args, **kargs):
 
 parser = argparse.ArgumentParser(description='test')
 parser.add_argument('--path_HSI', default="/media/xidian/4b9949b2-d832-4f6e-9211-60d8e6480133/HJ/毕设3/data/PaviaC-PaviaU/test/gtHS/", type=str, help='input files')
-parser.add_argument('--path_match', default="/media/xd132/USER/houston/match/Pavia_MSI.mat", type=str, help='result dir.')
+parser.add_argument('--path_match', default="/media/xidian/4b9949b2-d832-4f6e-9211-60d8e6480133/HJ/毕设3/data/PaviaC-PaviaU/unpaired/Pavia_MSI.mat", type=str, help='result dir.')
 parser.add_argument('--log_path', default="./log_1", type=str, help='alpha')
 parser.add_argument('--save_path', default="./match/test/1/{}_1.mat", type=str, help='save_path')
 parser.add_argument('--patch_size', default=80, type=int, help='patch_size')
@@ -132,6 +132,7 @@ if __name__ == "__main__":
                 _print("第{}张图 || 第{}patch || 相似度: {} ".format(step, k, out), args)
 
     print("ok")
+
 
 
 

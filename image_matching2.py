@@ -23,7 +23,7 @@ def _print(arg, args, **kargs):
 
 parser = argparse.ArgumentParser(description='test')
 parser.add_argument('--path_HSI', default="/media/xidian/4b9949b2-d832-4f6e-9211-60d8e6480133/HJ/毕设3/data/PaviaC-PaviaU/test/LRHS/", type=str, help='input files')
-parser.add_argument('--path_match', default="/media/xidian/4b9949b2-d832-4f6e-9211-60d8e6480133/data/PaviaC-PaviaU/unpaired/unpair_pavia.mat", type=str, help='match file.')
+parser.add_argument('--path_match', default="/media/xidian/4b9949b2-d832-4f6e-9211-60d8e6480133/HJ/毕设3/data/PaviaC-PaviaU/unpaired/unpair_pavia.mat", type=str, help='match file.')
 parser.add_argument('--log_path', default="./log_1", type=str, help='alpha')
 parser.add_argument('--save_path', default="./match/train/2/{}_2.mat", type=str, help='save_path')
 parser.add_argument('--patch_size', default=160, type=int, help='patch_size')
@@ -180,5 +180,6 @@ if __name__ == "__main__":
         # plt.savefig('./match_img/test/1/Match_{}.jpg'.format(step), bbox_inches='tight', pad_inches=0)
 
     print("ok")
+
 
 

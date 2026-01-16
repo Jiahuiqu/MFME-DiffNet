@@ -17,8 +17,8 @@ def _print(arg, args, **kargs):
 
 
 parser = argparse.ArgumentParser(description='test')
-parser.add_argument('--path_HSI', default="/media/xd132/USER/LS/修稿/houston/data/Huston/test/gtHS/", type=str, help='input files')
-parser.add_argument('--path_match', default="/media/xd132/USER/LS/修稿/houston/match/Houston2018_MSI.mat", type=str, help='result dir.')
+parser.add_argument('--path_HSI', default="/media/xd132/USER/houston/data/Huston/test/gtHS/", type=str, help='input files')
+parser.add_argument('--path_match', default="/media/xd132/USER/houston/match/Houston2018_MSI.mat", type=str, help='result dir.')
 parser.add_argument('--log_path', default="./log_1", type=str, help='alpha')
 parser.add_argument('--save_path', default="./match/test/1/{}_1.mat", type=str, help='save_path')
 parser.add_argument('--patch_size', default=80, type=int, help='patch_size')
@@ -132,3 +132,4 @@ if __name__ == "__main__":
                 _print("第{}张图 || 第{}patch || 相似度: {} ".format(step, k, out), args)
 
     print("ok")
+

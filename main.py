@@ -607,7 +607,7 @@ class SR3():
 
 
 if __name__ == "__main__":
-    batch_size = 4
+    batch_size = 8
     LR_size = 40
     img_size = 160
 
@@ -627,7 +627,7 @@ if __name__ == "__main__":
     test_loader = DataLoader(test_datasat, batch_size=1, shuffle=False, num_workers=0)
 
     cuda = torch.cuda.is_available()
-    schedule_opt = {'schedule': 'linear', 'n_timestep': 2000, 'linear_start': 1e-4, 'linear_end': 0.002}
+    schedule_opt = {'schedule': 'linear', 'n_timestep': 2000, 'linear_start': 1e-4, 'linear_end': 0.02}
 
     sr3 = SR3(DEVICE, img_size=img_size, LR_size=LR_size, loss_type='l1',
               dataloader=train_loader, testloader=test_loader, schedule_opt=schedule_opt,

@@ -223,7 +223,7 @@ class Diffusion(nn.Module):
         lrHS = lrHS.type(torch.float32).to(DEVICE)
         img_noise = torch.rand_like(gtHS, device=gtHS.device)
         for i in tqdm(reversed(range(0, self.num_timesteps, 10)), desc="Processing Timesteps"):
-            if (i < 1500):
+            if (i < 1000):
                 patch_1, sim_1 = match_method(torch.cat([lrHS.cpu(), img_noise.cpu()], dim=1), patch_1_org, 0.5)
                 patch_2, sim_2 = match_method(torch.cat([lrHS.cpu(), img_noise.cpu()], dim=1), patch_2_org, 1)
                 patch_3, sim_3 = match_method(torch.cat([lrHS.cpu(), img_noise.cpu()], dim=1), patch_3_org, 2)

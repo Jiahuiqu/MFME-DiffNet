@@ -621,7 +621,7 @@ if __name__ == "__main__":
     IN_CH_MSI = 4
 
     train_datasat = Datasat('train', 160, IN_CH_HSI=IN_CH_HSI, IN_CH_MSI=IN_CH_MSI)
-    train_loader = DataLoader(train_datasat, batch_size=4, shuffle=True, num_workers=0, drop_last=False)
+    train_loader = DataLoader(train_datasat, batch_size=batch_size, shuffle=True, num_workers=0, drop_last=False)
 
     test_datasat = Datasat('test', 160, IN_CH_HSI=IN_CH_HSI, IN_CH_MSI=IN_CH_MSI)
     test_loader = DataLoader(test_datasat, batch_size=1, shuffle=False, num_workers=0)
